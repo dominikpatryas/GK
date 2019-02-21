@@ -65,20 +65,20 @@ public class zad2 extends JPanel {
 		// The next two line scale the X to be twice the original size
 		// and then moves the center of the X from (0,0) to (450,150).
 		g2.setColor(Color.blue);
-		g2.translate(300,225);
+		g2.translate(300,200);
 		g2.scale(1,1);
 		g2.rotate(Math.toRadians(180),0,0);
 		triangle();
 		// Set the drawing color to red.
 		resetTransform();
 		g2.setColor(Color.blue);
-		g2.translate(300,325);
+		g2.translate(300,300);
 		g2.scale(2,1);
 		
 		square();
 		resetTransform();
 		g2.setColor(Color.blue);
-		g2.translate(300,425);
+		g2.translate(300,400);
 		g2.scale(1,1);
 //		g2.rotate(Math.toRadians(180),0,0);
 		triangle();
