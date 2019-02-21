@@ -22,24 +22,6 @@ public class Transforms2D extends JPanel {
 			
 			switch(whichTransform)
 			{
-			case 0:
-			{
-				int x = 150; int xpoczatkowe = x;
-				int y = 200;
-				int[] xValues1 =    {x,x, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20,
-						x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x, xpoczatkowe};
-				
-				 int[] yValues1 = {y, y, y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+120,y+120};
-					
-				
-				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
-				   g2.drawPolygon(polygon1);
-				   g2.fill(polygon1);
-				   
-			        
-			        
-				   break;
-			}
 			case 1:
 			{
 				int x = 150; int xpoczatkowe = x;
@@ -51,10 +33,28 @@ public class Transforms2D extends JPanel {
 					
 				
 				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
-				   g2.translate(180, -50);
+				   g2.drawPolygon(polygon1);
+				   g2.fill(polygon1);
+				   
+			        
+			        
+				   break;
+			}
+			case 2:
+			{
+				int x = 150; int xpoczatkowe = x;
+				int y = -20;
+				int[] xValues1 =    {x,x, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20,
+						x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x, xpoczatkowe};
+				
+				 int[] yValues1 = {y, y, y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+120,y+120};
+					
+				
+				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
+				   g2.translate(20, -50);
 			        g2.rotate(Math.PI/4);
 			      
-				   
+				   g2.scale(1.5, 1.5);
 				   g2.drawPolygon(polygon1);
 				   g2.fill(polygon1);
 				   
@@ -66,7 +66,27 @@ public class Transforms2D extends JPanel {
 				   
 			}
 			
-			case 2:
+			case 3:
+			{
+				int x = 150; int xpoczatkowe = x;
+				int y = 400;
+				int[] xValues1 =    {x,x, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20,
+						x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x, xpoczatkowe};
+				
+				 int[] yValues1 = {y, y, y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+120,y+120};
+					
+				
+				 Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
+				 
+			     g2.scale(1, 2);
+				 g2.rotate(Math.toRadians(180),300,300);
+				 g2.drawPolygon(polygon1);
+				 g2.fill(polygon1);
+				   
+				   break;
+				
+			}
+			case 4:
 			{
 				int x = 150; int xpoczatkowe = x;
 				int y = 200;
@@ -76,19 +96,43 @@ public class Transforms2D extends JPanel {
 				 int[] yValues1 = {y, y, y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+120,y+120};
 					
 				
-				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
+				 Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
 				 
 			      
-			        g2.rotate(Math.toRadians(45));
+				 AffineTransform tx2 = new AffineTransform();
+				 	tx2.translate(50, -100);
+			        tx2.shear(0, 0.5);
+
+			        g2.setTransform(tx2);
+			
+				 g2.drawPolygon(polygon1);
+				 g2.fill(polygon1);
+				   
+				   break;
+				
+			}
+			case 5:
+			{
+				int x = 150; int xpoczatkowe = x;
+				int y = 0;
+				int[] xValues1 =    {x,x, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x += 20,
+						x += 20, x += 20, x += 20, x += 20, x += 20, x += 20, x, xpoczatkowe};
+				
+				 int[] yValues1 = {y, y, y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+20, y,y+120,y+120};
+					
+				
+				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
 				   g2.drawPolygon(polygon1);
 				   g2.fill(polygon1);
 				   
+			        			        
 				   break;
-				   
-				   
-				   
-				   
-				   
+				
+			}
+			case 6:
+			{
+				
+				
 			}
 			}
 			
