@@ -15,7 +15,7 @@ public class Transforms2D extends JPanel {
 			super.paintComponent(g);
 			Graphics2D g2 = (Graphics2D)g;
 			g2.translate(0,0);  // Moves (0,0) to the center of the display.
-			int whichTransform = transformSelect.getSelectedIndex();
+			int whichTransform = transformSelect.getSelectedIndex(); /////
 			AffineTransform transform = new AffineTransform();
 			AffineTransform at = new AffineTransform();
 			
@@ -77,10 +77,9 @@ public class Transforms2D extends JPanel {
 					
 				
 				   Polygon polygon1 = new Polygon(xValues1, yValues1, 20);
-				   g2.translate(180, -50);
-			        g2.rotate(Math.PI/4);
+				 
 			      
-				   
+			        g2.rotate(Math.toRadians(45));
 				   g2.drawPolygon(polygon1);
 				   g2.fill(polygon1);
 				   
